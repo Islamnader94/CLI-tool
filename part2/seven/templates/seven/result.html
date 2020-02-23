@@ -1,0 +1,17 @@
+{% extends "seven/extend.html" %}
+
+{% block content %}
+<div class="message is-primary"">
+    <div class="message-header">
+        <p>List of numbers that is up to 7:</p>
+    </div>
+    <div class="message-body">
+        <p>
+            {% for pair in pairs %}
+            {{pair}}
+            {% endfor %}
+        </p>
+    </div>
+</div>
+<a href="{% url 'seven' %}" class="button is-outlined is-rounded is-link">Back</a>
+{% endblock %}

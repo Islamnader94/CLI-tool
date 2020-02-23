@@ -1,0 +1,2 @@
+cfn-flip==1.2.1
+PyYAML==5.1.2
