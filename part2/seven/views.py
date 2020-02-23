@@ -7,12 +7,7 @@ UP_TO = 7
 
 
 def _get_pairs(number_list):
-    """
-    Get unique pairs that can add up to 7
-    :param number_list: string Comma separated string of integers
-    :return: pairs:list
-    """
-    # Filter numbers and remove duplicates
+    # Filter numbers
     numbers = [int(number) for number in number_list.split(',')]
 
     numbers = sorted(list(set(numbers)))
@@ -42,20 +37,10 @@ def _get_pairs(number_list):
 
 
 def index(request):
-    """
-    Just redirects to main route
-    :param request:
-    :return:
-    """
     return redirect('seven')
 
 
 def seven(request):
-    """
-    Show form or find a list of unique number that can add up to 7
-    :param request:
-    :return:
-    """
     if request.method == 'POST':
         form = SevenForm(request.POST)
         if form.is_valid():
